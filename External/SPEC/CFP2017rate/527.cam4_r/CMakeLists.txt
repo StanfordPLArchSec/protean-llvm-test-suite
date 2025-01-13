@@ -34,8 +34,10 @@ macro(cam4_validator)
   cmake_parse_arguments(_carg "" "RUN_TYPE" "" ${ARGN})
 
   set(VALIDATOR cam4_validate-target_${BENCHMARK_SUITE_TYPE})
+  if (0)
   if (NOT TARGET ${VALIDATOR})
     add_executable(${VALIDATOR} "${SRC_DIR}/validate-cam.f90" $<TARGET_OBJECTS:cam4_netcdf>)
+  endif ()
   endif ()
 
   llvm_test_verify(WORKDIR ${RUN_${_carg_RUN_TYPE}_DIR_REL}

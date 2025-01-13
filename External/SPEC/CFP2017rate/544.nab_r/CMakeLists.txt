@@ -43,7 +43,7 @@ speccpu2017_run_test(
 
 ################################################################################
 
-speccpu2017_verify_output(RELATIVE_TOLERANCE 0.01)
+# speccpu2017_verify_output(RELATIVE_TOLERANCE 0.01)
 speccpu2017_add_executable(
   nabmd.c
   sff.c

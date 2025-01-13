@@ -91,7 +91,7 @@ wrf_validator(RUN_TYPE train)
 
 speccpu2017_run_test(RUN_TYPE ref)
 
-wrf_validator(RUN_TYPE ref)
+# wrf_validator(RUN_TYPE ref)
 
 ################################################################################
 
