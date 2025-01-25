@@ -166,6 +166,7 @@ check_fortran_compiler_flag("-fallow-argument-mismatch" SUPPORTS_FALLOW_ARGUMENT
 if (SUPPORTS_FALLOW_ARGUMENT_MISMATCH)
   target_compile_options(${PROG} PRIVATE $<$<COMPILE_LANGUAGE:Fortran>:-fallow-argument-mismatch>)
 endif ()
+target_compile_options(${PROG} PRIVATE $<$<COMPILE_LANGUAGE:C>:-Wno-implicit-int>)
 
 target_link_libraries(${PROG} PRIVATE cam4_netcdf)
 
